@@ -5,13 +5,13 @@ form, ::placeholder, button {
   display: flex;
   flex-direction: column;
 }
-label {
+label, span {
   text-align: left;
 }
 input {
   padding-left: 1em;
 }
 .error {
-  color: rgb(254, 98, 98);
+  color: #fe6262;
   text-transform: none;
 }

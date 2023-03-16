@@ -10,15 +10,18 @@ export default function formInput(props) {
     change(name, val)
     if (!val) 
       setError(`Field can't be blank`)
-    else
-    if (name === 'password')
-      if (val.length <= 7)
-        setError('password needs to be atleast 8 charachters')
-      else
+      else{
       setError('')
-    // if (name === 'confirmPassword')
-    //   if (!val === pass)
-    //     setError(`passwords don't match`)
+      if (name === 'username'){
+        if (val.length <= 2)
+          setError('Username needs to be atleast 3 characters')}
+      if (name === 'password'){
+        if (val.length <= 7)
+          setError('Password needs to be atleast 8 characters')}
+      if (name === 'confirmPassword')
+        if (val !== pass)
+          setError(`Passwords don't match`)
+        }
   }
 
   return (
