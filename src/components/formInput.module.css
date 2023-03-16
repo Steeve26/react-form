@@ -1,0 +1,17 @@
+form, ::placeholder, button {
+  text-transform: capitalize;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  text-align: left;
+}
+input {
+  padding-left: 1em;
+}
+.error {
+  color: rgb(254, 98, 98);
+  text-transform: none;
+}
