@@ -14,4 +14,8 @@ input {
 .error {
   color: #fe6262;
   text-transform: none;
+  display: none;
+}
+input:invalid[focused='false'] ~ span {
+  display: block;
 }

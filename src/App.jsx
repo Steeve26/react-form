@@ -18,19 +18,23 @@ function App() {
   const formattributes = [
     {
       id: 1,
-      label: 'username',
+      label: 'username*',
       type: 'text',
       name: 'username',
       placeholder: 'username',
-      errorMessage: 'must be 3-20 characters'
+      errorMessage: 'must be 3-20 characters',
+      required: 'true',
+      pattern: `\\w{3,20}`
     },
     {
       id: 2,
-      label: 'email',
+      label: 'email*',
       type: 'email',
       name: 'email',
       placeholder: 'email',
-      errorMessage: 'enter a valid email'
+      errorMessage: 'enter a valid email',
+      required: 'true',
+      pattern: `^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$`
     },
     {
       id: 3,
@@ -41,19 +45,23 @@ function App() {
     },
     {
       id: 4,
-      label: 'password',
+      label: 'password*',
       type: 'password',
       name: 'password',
       placeholder: 'password',
-      errorMessage: 'must include atleast 8 characters with 1 letter, 1 number and 1 special character'
+      errorMessage: 'must include atleast 8 characters with 1 letter, 1 number and 1 special character',
+      required: 'true',
+      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`
     },
     {
       id: 5,
-      label: 'confirmPassword',
+      label: 'confirmPassword*',
       type: 'password',
       name: 'confirmPassword',
       placeholder: 'confirm password',
-      errorMessage: `passwords don't match`
+      errorMessage: `passwords don't match`,
+      required: 'true',
+      pattern: [values.password]
     },
   ]
 
