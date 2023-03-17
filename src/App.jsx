@@ -8,6 +8,8 @@ import formInput from './components/formInput'
 function App() {
   const [values, setValues] = useState({
     username: '',
+    email: '',
+    birthday: '',
     password: '',
     confirmPassword: ''
   })
@@ -16,21 +18,42 @@ function App() {
   const formattributes = [
     {
       id: 1,
+      label: 'username',
       type: 'text',
       name: 'username',
-      placeholder: 'username'
+      placeholder: 'username',
+      errorMessage: 'must be 3-20 characters'
     },
     {
       id: 2,
-      type: 'password',
-      name: 'password',
-      placeholder: 'password'
+      label: 'email',
+      type: 'email',
+      name: 'email',
+      placeholder: 'email',
+      errorMessage: 'enter a valid email'
     },
     {
       id: 3,
+      label: 'birthday',
+      type: 'date',
+      name: 'birthday',
+      placeholder: 'date of birth',
+    },
+    {
+      id: 4,
+      label: 'password',
+      type: 'password',
+      name: 'password',
+      placeholder: 'password',
+      errorMessage: 'must include atleast 8 characters with 1 letter, 1 number and 1 special character'
+    },
+    {
+      id: 5,
+      label: 'confirmPassword',
       type: 'password',
       name: 'confirmPassword',
-      placeholder: 'confirm password'
+      placeholder: 'confirm password',
+      errorMessage: `passwords don't match`
     },
   ]
 
@@ -46,7 +69,7 @@ function App() {
             <FormInput key={input.id} {...input} pass={values.password} change={handleChange}/>
           )
         })}
-        <button onClick={e => {e.preventDefault()}}>submit</button>
+        <button type='submit' onClick={e => {e.preventDefault()}}>submit</button>
       </form>
     </div>
   )

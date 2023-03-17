@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import styles from './formInput.module.css'
 
 export default function formInput(props) {
-  const {change, name, type, placeholder, pass} = props
+  const {change, id, label, pass, ...input} = props
   const [error, setError] = useState('')
-
+ console.log(error)
   function handleshit(e, name) {
     let val = e.target.value
     change(name, val)
@@ -26,12 +26,13 @@ export default function formInput(props) {
 
   return (
     <div className={styles.formInput}>
-      <label htmlFor={name}>{name}</label>
+      <label htmlFor={label}>{label}</label>
       <br/>
-      <input id={name} name={name} type={type} placeholder={placeholder} 
+      <input id={label} {...input}
       onChange={e => handleshit(e, name)} />
       <br />
       <span className={styles.error}>{error}</span>
     </div>
   )
+
 }
