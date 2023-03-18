@@ -55,7 +55,7 @@ function App() {
     },
     {
       id: 5,
-      label: 'confirmPassword*',
+      label: 'confirm password*',
       type: 'password',
       name: 'confirmPassword',
       placeholder: 'confirm password',
