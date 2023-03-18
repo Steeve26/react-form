@@ -1,20 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700&family=Quicksand:wght@300;500;600;700&display=swap');
+
+*, label[title] {
+  font-family: quicksand;
+}
 form, ::placeholder, button {
   text-transform: capitalize;
 }
 .formInput {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
+}
+label {
+  font-weight: 500;
 }
 label, span {
   text-align: left;
 }
 input {
-  padding-left: 1em;
+  padding-inline: .8em;
+  height: 2.5em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: transparent;
+}
+input:focus {
+  border-color: rgb(0, 98, 255);
 }
 .error {
   color: #fe6262;
   text-transform: none;
   display: none;
+}
+input:invalid[focused='false'] {
+border-color: #fe6262;
 }
 input:invalid[focused='false'] ~ span {
   display: block;
