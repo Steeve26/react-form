@@ -24,7 +24,7 @@ function App() {
       placeholder: 'username',
       errorMessage: 'must be 3-20 characters',
       required: 'true',
-      pattern: `\\w{3,20}`
+      pattern: `[\\w+\d]{3,20}`
     },
     {
       id: 2,
@@ -72,12 +72,15 @@ function App() {
   return (
     <div className="App">
       <form>
-        {formattributes.map((input) => {
-          return(
-            <FormInput key={input.id} {...input} pass={values.password} change={handleChange}/>
-          )
-        })}
-        <button type='submit' onClick={e => {e.preventDefault()}}>submit</button>
+        <div className="image-card"></div>
+        <div className="form-fields">
+            {formattributes.map((input) => {
+              return(
+                <FormInput key={input.id} {...input} pass={values.password} change={handleChange}/>
+              )
+            })}
+          <button type='submit' onClick={e => {e.preventDefault()}}>submit</button>
+        </div>
       </form>
     </div>
   )
