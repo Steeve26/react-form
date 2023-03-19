@@ -72,19 +72,19 @@ button:hover::after {
 button:active {
   width: 95%;
 }
-@media  only screen and (max-height: 670px) {
+
+@media  only screen and (max-height: 730px) {
+  form {
+    transform: scale(.85)!important;
+  }
+}
+@media  only screen and (max-height: 1150px) {
   body {
     background: #000000 url('./assets/peakpx(22).jpg') 80%/contain;
     background-repeat: repeat-x;
   }
   form {
-    transform: scale(.7);
-  }
-}
-
-@media  only screen and (min-height: 730px) {
-  form {
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 @media  only screen and (min-height: 1150px) {
