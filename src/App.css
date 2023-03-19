@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #000000 url('./assets/peakpx(3).jpg') ;
+  background: #000000 url('./assets/peakpx(3).jpg') center/100%;
   /* background: url('./assets/cube.jpg') left; */
 
 }
@@ -69,6 +69,12 @@ button:hover::after {
 button:active {
   transform: scale(.96);
 }
+@media  only screen and (max-height: 670px) {
+  form {
+    transform: scale(.7);
+  }
+}
+
 @media  only screen and (min-height: 730px) {
   form {
     transform: scale(1.2);
