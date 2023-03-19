@@ -73,6 +73,10 @@ button:active {
   width: 95%;
 }
 @media  only screen and (max-height: 670px) {
+  body {
+    background: #000000 url('./assets/peakpx(22).jpg') 80%/contain;
+    background-repeat: repeat-x;
+  }
   form {
     transform: scale(.7);
   }
@@ -81,5 +85,19 @@ button:active {
 @media  only screen and (min-height: 730px) {
   form {
     transform: scale(1.2);
+  }
+}
+@media  only screen and (min-height: 1150px) {
+  form {
+    transform: scale(1.5);
+  }
+}
+@media  only screen and (min-height: 1360px) {
+  body {
+    background: #000000 url('./assets/peakpx(22).jpg') 80%/contain;
+    background-repeat: repeat-x;
+  }
+  form {
+    transform: scale(1.8);
   }
 }
